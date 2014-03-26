@@ -4,6 +4,15 @@ Skillunteer::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root 'home#index'
+
+  resources :home, only: [:index, :show]
+
+  namespace :api, defaults: { :format => :json } do
+    namespace :v1 do
+
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
