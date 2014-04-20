@@ -56,3 +56,4 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'normalize-rails'
+gem 'knockoutjs-rails'

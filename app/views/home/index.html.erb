@@ -3,8 +3,44 @@
 		<a href="<%= root_path %>">GiveTime</a>
 	</h1>
 
-	<%= form_tag home_index_path, { :class => "header-form", :method => :get } do %>
+	<%= form_tag home_index_path, { :class => "header-form clearfix", :method => :get } do %>
 		<%= text_field_tag "category", nil, { placeholder: "What is your passion?", class: "header-input" } %>
 		<%= submit_tag "Go", :class => "header-submit" %>
 	<% end %>
+
+	<p data-bind="visible: canDetectLocation()">Location: <a href="" data-bind="click: detectLocation, text: location() ? location : 'Auto Detect'"></a></p>
 </header>
+
+<script>
+	var viewModel = {
+		canDetectLocation: ko.observable(false),
+		detectLocation: detectLocation,
+		location: ko.observable()
+	}
+	ko.applyBindings(viewModel);
+
+	window.onload = function() {
+		canDetectLocation();
+	}
+
+	function canDetectLocation() {
+		if(navigator.geolocation) viewModel.canDetectLocation(true);
+	}
+
+	function detectLocation() {
+		viewModel.location("Updating...");
+
+		navigator.geolocation.getCurrentPosition(function(location) {
+			$.get("https://maps.google.com/maps/api/geocode/json?latlng=" + location.coords.latitude + ", " + location.coords.longitude + " &sensor=true", function( data ) {
+				var result = data['results'][4]['address_components'];
+				var formatted_address = result[0]['short_name'] + ', ' + result[3]['short_name'];
+
+				viewModel.location(formatted_address);
+			});
+		}, onError);
+	}
+
+	function onError() {
+		console.log("Your location can not be detected.");
+	}
+</script>
