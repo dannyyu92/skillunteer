@@ -1,7 +1,10 @@
-<h1>SkillunteerZ</h1>
+<header class="header">
+	<h1 class="header-logo">
+		<a href="<%= root_path %>">GiveTime</a>
+	</h1>
 
-I am passinate about
-<%= form_tag home_index_path, id: "search_form", :method => :get do %>
-  <%= text_field_tag "category", nil, placeholder: "Passion" %>
-  <%= submit_tag "Find me a charity" %>
-<% end %>
+	<%= form_tag home_index_path, { :class => "header-form", :method => :get } do %>
+		<%= text_field_tag "category", nil, { placeholder: "What is your passion?", class: "header-input" } %>
+		<%= submit_tag "Go", :class => "header-submit" %>
+	<% end %>
+</header>

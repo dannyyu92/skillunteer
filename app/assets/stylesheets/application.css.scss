@@ -1,0 +1,61 @@
+/*
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require normalize-rails
+ *= require html5boilerplate
+ *= require_tree .
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans:400,600);
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	padding: 1em;
+}
+
+.header-logo {
+	color: #565656;
+	font-family: 'Roboto Slab', serif;
+	font-size: 2.9em;
+
+	a {
+		color: #565656;
+		text-decoration: none;
+	}
+}
+
+.header-form {
+	font-size: 1.1em;
+	margin: 0 auto;
+	max-width: 23em;
+}
+
+.header-input {
+	border: 1px solid #acacac;
+	float: left;
+	line-height: 2.7em;
+	padding: 0 0.8em;
+	width: 80%;
+}
+
+.header-submit {
+	border: 1px solid #fc913a;
+	background: #fc913a;
+	color: #fff;
+	float: left;
+	font-weight: 600;
+	line-height: 2.7em;
+	padding: 0 1.5em;
+	width: 20%;
+}
