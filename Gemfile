@@ -10,6 +10,14 @@ group :development, :test do
   #mute asset pipeline
   gem 'quiet_assets'
   gem 'better_errors'
+	#the next 5 are for cucumber testing
+	gem 'cucumber-rails'
+	gem 'cucumber-rails-training-wheels'
+	gem 'database_cleaner'
+	gem 'capybara'
+	gem 'launchy'
+	#Rspec
+	gem 'rspec-rails'
 end
 
 group :production do
