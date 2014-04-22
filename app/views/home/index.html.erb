@@ -1,9 +1,9 @@
 <header class="header">
 	<h1 class="header-logo">
-		<a href="<%= root_path %>">GiveTime</a>
+		<%= link_to "GiveTime", root_path %>
 	</h1>
 
-	<%= form_tag home_index_path, { :class => "header-form clearfix", :method => :get } do %>
+	<%= form_tag results_path, { :class => "header-form clearfix", :method => :get } do %>
 		<%= text_field_tag "category", nil, { placeholder: "What is your passion?", class: "header-input" } %>
 		<%= submit_tag "Go", :class => "header-submit" %>
 	<% end %>
