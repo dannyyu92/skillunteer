@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @category = params[:category]    
+     
   end
 
-  def show
-
+  def results
+    @category = params[:category]
   end
 end
