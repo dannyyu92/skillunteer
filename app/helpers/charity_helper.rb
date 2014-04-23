@@ -27,7 +27,7 @@ module CharityHelper
     # Fill with random charities in zipcode
     until charities.size == 3
       random = zipcode_links.sample
-      if (random.uri.to_s.include? "organizations") && !(random.text.downcase.include? "read")
+      if (random.uri.to_s.include? "organizations") && !(random.text.downcase.include? "read") && !(random.text.downcase.include? "donate")
         charities << { name: random.text.strip, uri: "http://guidestar.org/#{random.uri.to_s}" }
       end
     end
