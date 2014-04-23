@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
-#static pages
-gem 'high_voltage', '~> 2.1.0'
+gem 'normalize-rails'
+gem 'knockoutjs-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
@@ -18,6 +18,7 @@ group :development, :test do
 	gem 'launchy'
 	#Rspec
 	gem 'rspec-rails'
+  gem 'binding_of_caller'
 end
 
 group :production do
@@ -63,5 +64,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
 gem 'normalize-rails'
 gem 'knockoutjs-rails'
+

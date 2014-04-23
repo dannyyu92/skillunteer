@@ -6,7 +6,9 @@ Skillunteer::Application.routes.draw do
   # root 'welcome#index'
   root 'home#index'
 
-  resources :home, only: [:index, :show]
+  resources :home, only: [:index]
+
+  get 'results' => 'home#results'
 
   namespace :api, defaults: { :format => :json } do
     namespace :v1 do
