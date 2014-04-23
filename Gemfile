@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'normalize-rails'
 gem 'knockoutjs-rails'
+gem 'httparty'
+gem 'mechanize'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
@@ -19,6 +21,7 @@ group :development, :test do
 	#Rspec
 	gem 'rspec-rails'
   gem 'binding_of_caller'
+  gem 'therubyracer'
 end
 
 group :production do
