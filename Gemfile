@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'normalize-rails'
 gem 'knockoutjs-rails'
+gem 'httparty'
+gem 'mechanize'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
