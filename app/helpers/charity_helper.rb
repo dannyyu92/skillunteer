@@ -1,6 +1,7 @@
 module CharityHelper
   def charities_grabber
     charities = []
+    @category_count = 0
 
     @a = Mechanize.new { |agent|
       agent.user_agent_alias = "Mac Firefox"
@@ -16,6 +17,7 @@ module CharityHelper
       if charities.size < 3
         if (link.text.downcase.include? "#{@category}") && (link.uri.to_s.include? "organizations")
           charities << { name: link.text.strip, uri: "http://guidestar.org/#{link.uri.to_s}" }
+          @category_count += 1
         end
       else
         break

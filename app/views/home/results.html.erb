@@ -1,3 +1,7 @@
+<p>
+  We only found <%= @category_count %> result(s) so we generated some random charities for you!
+</p>
+
 <% @top_charities.each do |x| %>
   <p>
     <%= x[:name] %>
