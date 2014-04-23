@@ -10,6 +10,7 @@ group :development, :test do
   #mute asset pipeline
   gem 'quiet_assets'
   gem 'better_errors'
+  gem 'binding_of_caller'
 	#the next 5 are for cucumber testing
 	gem 'cucumber-rails'
 	gem 'cucumber-rails-training-wheels'
@@ -18,8 +19,6 @@ group :development, :test do
 	gem 'launchy'
 	#Rspec
 	gem 'rspec-rails'
-  gem 'binding_of_caller'
-  gem 'therubyracer'
 end
 
 group :production do
