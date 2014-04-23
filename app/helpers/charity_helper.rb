@@ -2,19 +2,14 @@ module CharityHelper
   def charities_grabber
     charities = []
 
-    a = Mechanize.new { |agent|
+    @a = Mechanize.new { |agent|
       agent.user_agent_alias = "Mac Firefox"
     }
 
     # Form submission by category and zipcode
-    form = a.get("http://www.guidestar.org/").forms.first
-    form.field_with(:name => "ctl00$phMainBody$txtKeywords").value = "#{@category} 13903"
-    category_links = form.click_button.links
-
+    category_links = form_handler("#{@category} 13903")
     # Form submission by only zipcode
-    form2 = a.get("http://www.guidestar.org/").forms.first
-    form2.field_with(:name => "ctl00$phMainBody$txtKeywords").value = "13902"
-    zipcode_links = form2.click_button.links
+    zipcode_links = form_handler("13902")
 
     # Fill with most relevant charities
     category_links.each do |link|
@@ -36,6 +31,12 @@ module CharityHelper
     end
 
     charities
+  end
+
+  def form_handler(query)
+    form = @a.get("http://www.guidestar.org/").forms.first
+    form.field_with(:name => "ctl00$phMainBody$txtKeywords").value = query
+    form.click_button.links
   end
 
   module_function :charities_grabber
