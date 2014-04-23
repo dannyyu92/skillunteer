@@ -15,7 +15,7 @@ module CharityHelper
     category_links.each do |link|
       if charities.size < 3
         if (link.text.downcase.include? "#{@category}") && (link.uri.to_s.include? "organizations")
-          charities << { name: link.text.strip, uri: link.uri.to_s }
+          charities << { name: link.text.strip, uri: "http://guidestar.org/#{link.uri.to_s}" }
         end
       else
         break
@@ -26,7 +26,7 @@ module CharityHelper
     until charities.size == 3
       random = zipcode_links.sample
       if (random.uri.to_s.include? "organizations") && !(random.text.downcase.include? "read")
-        charities << { name: random.text.strip, uri: random.uri.to_s }
+        charities << { name: random.text.strip, uri: "http://guidestar.org/#{random.uri.to_s}" }
       end
     end
 
