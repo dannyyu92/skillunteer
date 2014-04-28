@@ -1,9 +1,12 @@
 class HomeController < ApplicationController
+  include CharityHelper
+
   def index
-    @category = params[:category]    
+     
   end
 
-  def show
-
+  def results
+    @category = params[:category].downcase
+    @top_charities = charities_grabber()
   end
 end
