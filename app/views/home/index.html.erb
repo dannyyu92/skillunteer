@@ -5,6 +5,7 @@
 
 	<%= form_tag results_path, { :class => "header-form clearfix", :method => :get } do %>
 		<%= text_field_tag "category", nil, { placeholder: "What is your passion?", class: "header-input" } %>
+		<%= hidden_field_tag "zip", nil, { data: { bind: "value: postalCode" } } %>
 		<%= submit_tag "Go", :class => "header-submit" %>
 	<% end %>
 
@@ -15,7 +16,8 @@
 	var viewModel = {
 		canDetectLocation: ko.observable(false),
 		detectLocation: detectLocation,
-		location: ko.observable()
+		location: ko.observable(),
+		postalCode: ko.observable()
 	}
 	ko.applyBindings(viewModel);
 
@@ -55,6 +57,7 @@
 				var formatted_address = city + ', ' + state;
 
 				viewModel.location(formatted_address);
+				viewModel.postalCode(postalCode);
 			});
 		}, onError);
 	}
