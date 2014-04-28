@@ -32,8 +32,27 @@
 
 		navigator.geolocation.getCurrentPosition(function(location) {
 			$.get("https://maps.google.com/maps/api/geocode/json?latlng=" + location.coords.latitude + ", " + location.coords.longitude + " &sensor=true", function( data ) {
-				var result = data['results'][4]['address_components'];
-				var formatted_address = result[0]['short_name'] + ', ' + result[3]['short_name'];
+				var result = data['results'][0]['address_components'];
+				var city, state, postalCode;
+
+				for (var i = result.length - 1; i >= 0; i--) {
+					// grab city name
+					if ($.inArray('locality', result[i]['types']) !== -1) {
+						city = result[i]['long_name'];
+					}
+
+					// grab state name
+					if ($.inArray('administrative_area_level_1', result[i]['types']) !== -1) {
+						state = result[i]['long_name'];
+					}
+
+					// grab postal code
+					if ($.inArray('postal_code', result[i]['types']) !== -1) {
+						postalCode = result[i]['long_name'];
+					}
+				};
+
+				var formatted_address = city + ', ' + state;
 
 				viewModel.location(formatted_address);
 			});
