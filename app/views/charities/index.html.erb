@@ -1,0 +1,12 @@
+<h4>
+  User-Added Charities:
+</h4>
+
+<% @charities.each do |charity| %>
+  <%= link_to charity.name, charity %> | <%= link_to "Edit", edit_charity_path(charity) %>
+<% end %>
+
+<p>
+  Don't see a charity?
+  <%= link_to "Add one", new_charity_path %>
+</p>

@@ -3,8 +3,20 @@
 </p>
 
 <% @top_charities.each do |x| %>
-  <p>
-    <%= x[:name] %>
-    <%= x[:uri] %>
-  </p>
+  <div class="charity">
+    <p>
+      <strong>
+        <%= x[:name] %>
+      </strong>
+      <%= link_to "Link", x[:uri] %>
+      <% if user_signed_in? %>
+        <%= link_to "Save", "/" %>
+      <% end %>
+    </p>
+    <p>
+      <%= x[:mission] %>
+    </p>
+  </div>
 <% end %> 
+
+Charity data from GuideStar.org
