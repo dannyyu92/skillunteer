@@ -1,14 +1,14 @@
 <header class="header">
-	<h1 class="header-logo">
-		<%= link_to "GiveTime", root_path %>
-	</h1>
-
 	<%= form_tag results_path, { :class => "header-form clearfix", :method => :get } do %>
 		<%= text_field_tag "category", nil, { placeholder: "What is your passion?", class: "header-input" } %>
 		<%= hidden_field_tag "zip", nil, { data: { bind: "value: postalCode" } } %>
 		<%= submit_tag "Go", :class => "header-submit" %>
 	<% end %>
 
+	<p>
+		Or <%= link_to "View Charities", charities_path %>
+	</p>
+	
 	<p data-bind="visible: canDetectLocation()">Location: <a href="" data-bind="click: detectLocation, text: location() ? location : 'Auto Detect'"></a></p>
 </header>
 

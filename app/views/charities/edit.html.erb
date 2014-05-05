@@ -1,0 +1,5 @@
+Editing <%= @charity.name %>
+
+<%= render 'charities/form' %>
+
+<%= link_to "Delete #{@charity.name}", charity_path(@charity), method: :delete, confirm: "Are you sure you wish to delete?" %>

@@ -1,0 +1,6 @@
+<%= form_for @charity do |f| %>
+  <%= f.text_field :name, placeholder: "Name of charity" %><br />
+  <%= f.text_field :link, placeholder: "URL" %><br />
+  <%= f.text_area :mission, placeholder: "Mission Statement" %><br />
+  <%= f.submit "Submit" %>
+<% end %>
