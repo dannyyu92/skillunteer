@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  include CharityHelper
+  #include CharityHelper
 
   def index
      
@@ -7,6 +7,8 @@ class HomeController < ApplicationController
 
   def results
     @category = params[:category].downcase
-    @top_charities = charities_grabber()
+    @zipcode = params[:zip].to_i
+    charities_by_zip = Charity.where(zipcode: (@zipcode-100)..(@zipcode+100))
+    @top_charities = charities_by_zip.where("mission LIKE ?", "%#{params[:category]}%").first(3)
   end
 end

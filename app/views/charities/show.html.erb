@@ -3,11 +3,15 @@
 </h1>
 
 <p>
-  Link: <%= link_to @charity.link, @charity.link %>
+  <%= link_to @charity.link, @charity.link %>
 </p>
 
 <p>
   Mission Statement: <%= @charity.mission %>
+</p>
+
+<p>
+  Zipcode: <%= @charity.zipcode %>
 </p>
 
 <%= link_to "Back to Charities", charities_path %>

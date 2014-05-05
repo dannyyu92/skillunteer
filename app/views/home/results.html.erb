@@ -1,22 +1,20 @@
 <p>
-  We only found <%= @category_count %> result(s) so we generated some random charities for you!
+  Here are the most relevant matches within zipcode <%= @zipcode %> ± 100:
 </p>
 
 <% @top_charities.each do |x| %>
   <div class="charity">
     <p>
       <strong>
-        <%= x[:name] %>
+        <%= x.name %>
       </strong>
-      <%= link_to "Link", x[:uri] %>
+      <%= link_to "Link", x.link %>
       <% if user_signed_in? %>
         <%= link_to "Save", "/" %>
       <% end %>
     </p>
     <p>
-      <%= x[:mission] %>
+      <%= x.mission %>
     </p>
   </div>
 <% end %> 
-
-Charity data from GuideStar.org
