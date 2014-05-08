@@ -5,6 +5,13 @@ describe CharitiesController do
 		@return = mock('charity1', :id => 0)
 	end
 
+	describe 'edit' do
+		it 'Edits a charity in the database' do
+			Charity.should_receive(:new).and_return(@return)
+			#get :new, :charity => {:category => "test"}
+		end
+	end
+
 	describe 'new' do
 		it 'Adds a charity to the database' do
 			Charity.should_receive(:new).and_return(@return)
@@ -30,6 +37,8 @@ describe CharitiesController do
 			put :update, :id => 0
 		end
 	end
+
+	
 
 
 end
