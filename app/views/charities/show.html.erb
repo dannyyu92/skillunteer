@@ -1,17 +1,9 @@
-<h1>
-  <%= @charity.name %>
-</h1>
+<h2 class="page-title"><%= @charity.name %></h2>
 
-<p>
-  <%= link_to @charity.link, @charity.link %>
-</p>
-
-<p>
-  Mission Statement: <%= @charity.mission %>
-</p>
-
-<p>
-  Zipcode: <%= @charity.zipcode %>
-</p>
+<ul>
+  <li><strong>Website:</strong> <%= link_to @charity.link, @charity.link %></li>
+  <li><strong>Mission Statement:</strong> <%= @charity.mission %></li>
+  <li><strong>Zip code:</strong> <%= @charity.zipcode %></li>
+</ul>
 
 <%= link_to "Back to Charities", charities_path %>

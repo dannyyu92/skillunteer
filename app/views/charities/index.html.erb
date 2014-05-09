@@ -1,12 +1,9 @@
-<h4>
-  User-Added Charities:
-</h4>
+<h2 class="page-title">Charities</h2>
 
-<% @charities.each do |charity| %>
-  <%= link_to charity.name, charity %> | <%= link_to "Edit", edit_charity_path(charity) %>
-<% end %>
+<ul>
+  <% @charities.each do |charity| %>
+  <li><strong><%= link_to charity.name, charity %></strong> (<%= link_to "Edit", edit_charity_path(charity) %>)</li>
+  <% end %>
+</ul>
 
-<p>
-  Don't see a charity?
-  <%= link_to "Add one", new_charity_path %>
-</p>
+<p>Don't see a charity? <%= link_to "Add one", new_charity_path %></p>
