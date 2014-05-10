@@ -13,3 +13,9 @@
 		And I should see "Org title here"
 		And I should see "Org title here"
 		
+  Scenario: find out more about a charity
+	When I go to the results page
+	And I press "Org title here"
+#	Then I should see "Website:"
+#	And I should see "Mission Statement:"
+#	And I should see "Zip Code:"

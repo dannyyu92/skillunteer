@@ -1,8 +1,4 @@
-# TL;DR: YOU SHOULD DELETE THIS FILE
-#
-# This file is used by web_steps.rb, which you should also delete
-#
-# You have been warned
+
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -15,6 +11,19 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
+
+    when /the "charities" page/
+      '/charities'
+
+    when /the results page/
+      '/results'
+
+    when /the "new" page/
+      '/charities/new'
+
+    when /the "edit" page/
+      '/charities/1/edit'
+
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
@@ -33,6 +42,8 @@ module NavigationHelpers
       end
     end
   end
+
+
 end
 
 World(NavigationHelpers)

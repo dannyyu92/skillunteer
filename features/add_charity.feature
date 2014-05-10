@@ -17,10 +17,12 @@
 
 	Scenario: successfully add charity to data base
 		When I go to the "new" page
-		And I fill in "Name" with "Volunteer Friends"
-		And I fill in "URL" with "volunteerfriends.com"
-		And I fill in "mission statement" with "friends who volunteer"
-		And I fill in zip code with "13902"
+		And I fill in "name" with "Volunteer Friends"
+		And I fill in "link" with "volunteerfriends.com"
+		And I fill in "mission" with "friends who volunteer"
+		And I fill in "zip code" with "13902"
 		And I press "submit"
 		Then I should see "Charity successfully added"
 		And I should see "Volunteer Friends"
+
+		
