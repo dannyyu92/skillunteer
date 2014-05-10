@@ -17,7 +17,7 @@
 
 	Scenario: successfully delete charity from data base
 		When I go to the "edit" page
-		And I press "submit"
+		And I press "delete"
 		Then I should see "Are you sure you wish to delete?"
 		And I press "OK"
 		And I should see "Charity successfully deleted"
