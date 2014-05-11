@@ -31,5 +31,14 @@
 		And I fill in "Mission Statement" with "friends who volunteer"
 		And I fill in "Zipcode" with "13902"
 		And I press "Submit"
+
+		When I go to the "new" page
+		And I fill in "name" with "Volunteer Friends"
+		And I fill in "link" with "volunteerfriends.com"
+		And I fill in "mission" with "friends who volunteer"
+		And I fill in "zip code" with "13902"
+		And I press "submit"
 		Then I should see "Charity successfully added"
 		And I should see "Volunteer Friends"
+
+		

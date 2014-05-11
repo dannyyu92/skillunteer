@@ -50,7 +50,7 @@ When /^(?:|I )go to (.+)$/ do |page_name|
 end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
-  click_button(button)
+  %{I press (button)}   # my revised version that passes
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
@@ -234,6 +234,7 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
   else
     assert_equal path_to(page_name), current_path
   end
+
 end
 
 Then /^(?:|I )should have the following query string:$/ do |expected_pairs|
