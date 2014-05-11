@@ -26,11 +26,10 @@ module NavigationHelpers
     when /^the new page$/
       '/charities/new'
 
-    when /^the edit page for Animal shelter$/
-      '/charities/0/edit'
+    when /^the edit page for "(.*)"$/
+      id = Charity.find_by_name($1).id
+      "/charities/#{id}/edit"
 
-		when /^the charities page for Animal shelter$/
-				'/charities/0'
 		when /^the charity page for "(.*)"$/
 				id = Charity.find_by_name($1).id
 				"/charities/#{id}"
