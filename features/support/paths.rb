@@ -17,17 +17,23 @@ module NavigationHelpers
 		when /^the new page$/
 			'/charities/new'
 
-    when /the "charities" page/
+    when /^the charities page$/
       '/charities'
 
-    when /the results page/
+    when /^the results page$/
       '/results'
 
-    when /the "new" page/
+    when /^the new page$/
       '/charities/new'
 
-    when /the "edit" page/
-      '/charities/1/edit'
+    when /^the edit page for Animal shelter$/
+      '/charities/0/edit'
+
+		when /^the charities page for Animal shelter$/
+				'/charities/0'
+		when /^the charity page for "(.*)"$/
+				id = Charity.find_by_name($1).id
+				"/charities/#{id}"
 
 
     # Add more mappings here.

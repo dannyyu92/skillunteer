@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/saasbook/Desktop/GiveTime/app/models/user.rb": [
+      "/home/saasbook/Documents/giveTime/skillunteer/app/models/user.rb": [
         1,
         null,
         null,
@@ -9,116 +9,59 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/GiveTime/app/controllers/home_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/GiveTime/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
+      "/home/saasbook/Documents/giveTime/skillunteer/app/models/charity.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/GiveTime/app/helpers/application_helper.rb": [
+      "/home/saasbook/Documents/giveTime/skillunteer/app/controllers/home_controller.rb": [
         1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null,
         null
       ],
-      "/home/saasbook/Desktop/GiveTime/app/helpers/charity_helper.rb": [
+      "/home/saasbook/Documents/giveTime/skillunteer/app/controllers/application_controller.rb": [
         1,
-        1,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        null,
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        0,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        1,
-        0,
         null,
         null,
         1,
         null
       ],
-      "/home/saasbook/Desktop/GiveTime/app/helpers/home_helper.rb": [
+      "/home/saasbook/Documents/giveTime/skillunteer/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/GiveTime/app/controllers/charities_controller.rb": [
+      "/home/saasbook/Documents/giveTime/skillunteer/app/helpers/home_helper.rb": [
         1,
+        null
+      ],
+      "/home/saasbook/Documents/giveTime/skillunteer/app/controllers/charities_controller.rb": [
+        1,
+        1,
+        5,
+        null,
+        null,
         1,
         2,
         null,
         null,
         1,
-        0,
+        2,
         null,
         null,
         1,
         1,
-        null,
-        null,
         1,
-        0,
-        0,
-        0,
+        1,
         null,
         0,
         null,
@@ -145,15 +88,11 @@
         null,
         1,
         1,
-        0,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/GiveTime/app/models/charity.rb": [
         1,
+        null,
         null
       ]
     },
-    "timestamp": 1399757724
+    "timestamp": 1399835586
   }
 }

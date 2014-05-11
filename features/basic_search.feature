@@ -29,14 +29,11 @@
 		Then I should be on the results page
 		Then I should see "Soup Kitchen"
 		And I should see "message about there being less charities"
-    Then I should see "Org title here"
-		And I should see "Org title here"
-		And I should see "Org title here"
 		
   Scenario: find out more about a charity
-	When I go to the results page
-	And I press "Org title here"
-	Then I should see "Website:"
+	When I go to the charities page
+	And I follow "Animal shelter"
+	Then I should see "Website: animals.com"
 	And I should see "Mission Statement:"
-	And I should see "Zip Code:"
+	And I should see "Zip code:"
 
