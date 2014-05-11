@@ -7,5 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-charities = ([{:name => 'Animal shelter', :link => 'animals.com', :mission => 'saving the baby animals', :zipcode => '12345'}, {:name => 'Horse petting', :link => 'horses.com', :mission => 'Help the animals', :zipcode => '12345'}, {:name => 'Animal hospital', :link => 'animalhospital.com', :mission => 'Hospital for animlas', :zipcode => '12345'}, {:name => 'Soup Kitchen', :link => 'foodforgood.com', :mission => 'feed the hungry', :zipcode => '79802'}])
+charities = ([{:id => 0, :name => 'Animal shelter', :link => 'animals.com', :mission => 'saving the baby animals', :zipcode => '12345'}, {:name => 'Horse petting', :link => 'horses.com', :mission => 'Help the animals', :zipcode => '12345'}, {:name => 'Animal hospital', :link => 'animalhospital.com', :mission => 'Hospital for animlas', :zipcode => '12345'}, {:name => 'Soup Kitchen', :link => 'foodforgood.com', :mission => 'feed the hungry', :zipcode => '79802'}])
+
+charities.each do |charity|
+	puts charity
+  Charity.create!(charity)
+end
 

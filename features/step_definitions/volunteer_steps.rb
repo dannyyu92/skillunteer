@@ -1,5 +1,5 @@
-Given /the following organizations exist/ do |organization_table|
-	organization_table.hashes.each do |organization|
-	Organization.create organization
+Given /the following organizations exist:/ do |charity_table|
+	charity_table.hashes.each do |charity|
+	Charity.create charity
 	end
 end
